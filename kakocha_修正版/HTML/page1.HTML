@@ -115,6 +115,7 @@
     document.getElementById('brushSize').addEventListener('input', (e) => brushSize = parseInt(e.target.value));
     document.getElementById('clearCanvas').addEventListener('click', () => {
       drawingCtx.clearRect(0, 0, drawingCanvas.width, drawingCanvas.height);
+      backgroundCtx.clearRect(0, 0, backgroundCanvas.width, backgroundCanvas.height);
       history = [];
       redoStack = [];
     });
@@ -295,7 +296,7 @@ const images = [
     });
 
     backToTopButton.addEventListener('click', () => {
-      window.location.href = "file:///C:/Users/xuoxo/Downloads/kakocha_%E4%BF%AE%E6%AD%A3%E7%89%88/HTML/index.HTML";
+      window.location.href = "HTML/index.HTML";
     });
 
     // 3分間操作がない場合にトップページに遷移するタイマーを設定
@@ -303,7 +304,7 @@ const images = [
     function resetInactivityTimer() {
       clearTimeout(inactivityTimer);
       inactivityTimer = setTimeout(() => {
-        window.location.href = "file:///C:/Users/xuoxo/Downloads/kakocha_%E4%BF%AE%E6%AD%A3%E7%89%88/HTML/index.HTML";
+        window.location.href = "HTML/index.HTMLL";
       }, 3 * 60 * 1000); // 3分 (3 * 60 * 1000ミリ秒)
     }
 
